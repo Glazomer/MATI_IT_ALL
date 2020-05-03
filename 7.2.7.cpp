@@ -7,7 +7,7 @@ using namespace std;
 typedef struct {
   int* data;
   size_t size = 0;
-  int operator[](size_t idx){return data[idx];};
+  int& operator[](size_t idx){return data[idx];};
   void push(int el){
     ++size;
     data = (int*) realloc(data, (size) * sizeof(int));

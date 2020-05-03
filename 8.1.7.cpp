@@ -10,7 +10,7 @@ class Array{
 
   public:
   size_t size(){return _size;};
-  int operator[](size_t i){return data[i];};
+  int& operator[](size_t i){return data[i];};
   bool operator>(Array &b){return this->size() > b.size();}
   bool operator<(Array &b){return  b > *this;}
   bool operator==(Array &b){return this->size() == b.size();}

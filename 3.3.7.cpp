@@ -29,17 +29,20 @@ int main(int argc, char **argv) {
   switch (answer)
   {
   case(3):
-    result = 27 - map[0] * 2; 
+    result = 6 - map[0] * 2; 
     break;
-
+// 1,2,3: 123, 132, 213, 231, 312, 321 => 6
+// 0,1,2: 120, 102, 210, 201 => 4
   case(2):
     result = 3 - map[0]; 
     break;
-
+// 1,2: 221, 212, 122 => 3
+// 0,1: 110, 101 => 2
   case(1):
     result = 1 - (map[0] > 0); 
     break;
-
+// 1: 111 => 1
+// 0: 000 => 0
   default:
     return 1;
     break;

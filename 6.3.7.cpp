@@ -7,8 +7,6 @@ using namespace std;
 
 
 void fillRand(double* array, size_t size, double lowerBound, double upperBound){
-  srand(time(NULL));
-
   double diff = upperBound - lowerBound;
 
   for (int i = 0; i < size; ++i){
@@ -19,11 +17,13 @@ void fillRand(double* array, size_t size, double lowerBound, double upperBound){
  
 int main(int argc, char **argv){
   ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0);
+  
+  srand(time(NULL));
 
   double array[10];
   int size = sizeof(array)/sizeof(array[0]);
   
-  fillRand(array, size, 10.5, 50.9);
+  fillRand(array, size, 60.5, 50.9);
 
   for (int i = 0; i < size; ++i){
     cout << array[i] << endl;
