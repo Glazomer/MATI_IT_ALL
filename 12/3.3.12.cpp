@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 int main(int argc, char *argv[]) {
 
@@ -28,10 +29,10 @@ int main(int argc, char *argv[]) {
     if (err == 1){
       std::cout << "error: division by zero" << std::endl;
       if ((X-1) != 0 && result1 < Y/(X-1)){
+        std::cout << result1 << std::endl;
+      }else{
         result3 = Y/(X-1);
         std::cout << result3 << std::endl;
-      }else{
-        std::cout << result1 << std::endl;
       }
     }else if (err == 2){
       if (result1 < result2){
@@ -42,10 +43,13 @@ int main(int argc, char *argv[]) {
     }else{
       std::cout << "error: any error" << std::endl;
     }
+    return 0;
   }
   catch (...){
     std::cout << "unknown error" << std::endl;
   }
 
+  std::cout << std::min({result1, result2, result3}) << std::endl;
+  
   return 0;
 }
