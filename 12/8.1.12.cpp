@@ -61,5 +61,15 @@ int main(int argc, char *argv[]) {
   std::cout << m1.ukazatel()[0][0] << std::endl;
   m1.random();
   std::cout << m1.ukazatel()[0][0] << std::endl;
+
+  for (int i = 0; i < 10; i++)
+  {
+    for (int j = 0; j < 10; j++)
+    {
+      std::cout << m1.ukazatel()[i][j] << ", ";
+    }
+    std::cout << std::endl;
+  }
+
   return 0;
 }

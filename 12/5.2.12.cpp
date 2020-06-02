@@ -1,23 +1,19 @@
 #include <iostream>
 
 int main(int argc, char *argv[]) {
-  int n;
+  int sum = 0, i = 0, n;
   std::cin >> n;
   int  *nums = new int[n];
-  for (int i = 0; i < n; i++)
-  {
+
+  while (i < n){
     std::cin >> nums[i];
-  }
-  int sum = 0;
-  for (int i = 0; i < n; i ++)
-  {
-    if (nums[i] % 12 == 0)
-    {
+    if (nums[i] % 12 == 0){
       sum += nums[i];
     }
+    i++;
   }
 
   std::cout << "sum: " << sum << std::endl;
-
+  delete[] nums;
   return 0;
 }
