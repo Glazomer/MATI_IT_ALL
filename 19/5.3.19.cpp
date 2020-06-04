@@ -21,5 +21,6 @@ int main(){
     }
   }
   printf("big: %i, small: %i\n", big, small);
+  delete[] a;
   return 0;
 }

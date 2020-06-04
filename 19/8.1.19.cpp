@@ -49,11 +49,17 @@ class Polynom
   // Функция для заполнения 
   void Zapoln(int i, int z)
   {
-    coef[i] = z;
+    if (i < quantity)
+      coef[i] = z;
+    else
+      coef[quantity - 1] = z;
   } 
   int Poluch(int i)
   {
-    return coef[i];
+    if (i < quantity)
+      return coef[i];
+    else
+      return coef[quantity - 1];
   }
 };
 

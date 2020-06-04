@@ -1,6 +1,6 @@
 // #include <conio.h>
 #include <iostream>
-void main()
+int main()
 {
    float x, y, m, n;
    std::cout<<"vvedite x, y";
@@ -24,4 +24,5 @@ void main()
    
    std::cout << m+n;
    // _getch();
+   return 0;
 }

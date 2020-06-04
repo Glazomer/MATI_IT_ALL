@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 int main()
 { 
   int c = 0;
@@ -8,10 +7,10 @@ int main()
 
   while (*ptr != '\0')
   {
-    if (l = '\0' && *ptr != ' ')
+    if (l == '\0' && *ptr != ' ')
     {
       l = *ptr;
-    }else if(*(ptr+1) == ' ')
+    }else if(*(ptr+1) == ' ' || *(ptr+1) == '\0')
     {
       if (*ptr == l)
       {

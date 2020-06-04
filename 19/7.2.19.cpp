@@ -22,7 +22,10 @@ void DeletePolynom(Polynom& p)
 // Функция для заполнения 
 void Zapoln(Polynom& p, int i, int z)
 {
-  p.coef[i] = z;
+  if (i < p.quantity)
+    p.coef[i] = z;
+  else
+    p.coef[p.quantity - 1] = z;
 }
 
 bool operator== (const Polynom& p1, const Polynom& p2)
