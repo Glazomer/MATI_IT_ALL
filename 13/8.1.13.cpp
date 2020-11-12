@@ -2,8 +2,8 @@
 
 class Logic { 
   private:
-    bool *v;
     unsigned l;
+    bool *v;
   public:
     Logic operator&& (Logic &b){
       Logic c(l);
@@ -35,40 +35,42 @@ class Logic {
 }; 
 
 
-int main(int argc, char **argv){ 
-  Logic l1 = Logic(5, (bool[]){true, true, true, false, false}), 
-    l2 = Logic(6, (bool[]){false, true, false, false, true, false}),
+int main(int argc, char **argv){
+  bool v1[] = {true, true, true, false, false},
+    v2[] = {true, true, true, false, false};
+  Logic l1 = Logic(5, v1), 
+    l2 = Logic(6, v2),
     l3 = l1 && l2,
     l4 = l1 || l2,
     l5 = !l1;
   std::cout << "l1 = ";
-  for (int i = 0; i < l1.getL(); ++i){
+  for (int i = 0, l = l1.getL(); i < l; ++i){
     std::cout << l1.getV()[i] << ',';
   }
   std::cout << '\n';
   std::cout << "l2 = ";
-  for (int i = 0; i < l2.getL(); ++i){
+  for (int i = 0, l = l2.getL(); i < l; ++i){
     std::cout << l2.getV()[i] << ',';
   }
   std::cout << '\n';
   std::cout << "l1 && l2 = ";
-  for (int i = 0; i < l3.getL(); ++i){
+  for (int i = 0, l = l3.getL(); i < l; ++i){
     std::cout << l3.getV()[i] << ',';
   }
   std::cout << '\n';
   std::cout << "l1 || l2 = ";
-  for (int i = 0; i < l4.getL(); ++i){
+  for (int i = 0, l = l4.getL(); i < l; ++i){
     std::cout << l4.getV()[i] << ',';
   }
   std::cout << '\n';
   std::cout << "!l1 = ";
-  for (int i = 0; i < l5.getL(); ++i){
+  for (int i = 0, l = l5.getL(); i < l; ++i){
     std::cout << l5.getV()[i] << ',';
   }
   std::cout << '\n';
   l1.getV()[2] = false;
   std::cout << "l1 = ";
-  for (int i = 0; i < l1.getL(); ++i){
+  for (int i = 0, l = l1.getL(); i < l; ++i){
     std::cout << l1.getV()[i] << ',';
   }
   std::cout << '\n';
