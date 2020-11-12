@@ -1,8 +1,8 @@
 #include <iostream>
 
-int function(double limit){
+double function(double limit){
   double otvet = 1;
-  for (double i = 0; i < limit; i++)
+  for (int i = 0; i < limit; i++)
   {
     otvet *= (1 + 1/(2+i)); 
   }
