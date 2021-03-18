@@ -11,7 +11,7 @@ struct Str
   };
 };
 
-Str operator- (Str s)
+Str &operator- (Str &s)
 {
   for (unsigned i = 0; i < s.size / 2; ++i)
   {
